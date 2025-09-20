@@ -1,0 +1,22 @@
+=== Start ===
+isEmpty? true
+after append 10,20,30 (len=3): 10 <--> 20 <--> 30
+after inserts @0,@2,@end (len=6): 5 <--> 10 <--> 15 <--> 20 <--> 30 <--> 40
+getElement(0): 5
+getElement(3): 20
+getElement(last): 40
+getElement(-1) threw? yes
+getElement(len) threw? yes
+search(15): true
+search(999): false
+after replace idx2->17, idx4->33 (len=6): 5 <--> 10 <--> 17 <--> 20 <--> 33 <--> 40
+after remove first,last,middle (len=3): 10 <--> 20 <--> 33
+copy(b) from a (len=3): 10 <--> 20 <--> 33
+a after replace(0,999) (len=3): 999 <--> 20 <--> 33
+b should be unchanged (len=3): 10 <--> 20 <--> 33
+c = a (len=3): 999 <--> 20 <--> 33
+c self-assign (len=3): 999 <--> 20 <--> 33
+c after remove(0) (len=2): 20 <--> 33
+a unchanged by c's remove (len=3): 999 <--> 20 <--> 33
+a cleared. isEmpty? true
+=== Done ===
